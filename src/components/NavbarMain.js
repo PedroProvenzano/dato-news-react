@@ -109,16 +109,42 @@ export default function NavbarMain({ setIsHome }) {
               <Button color="secondary">Entrevistas</Button>
             </Box>
           )}
-          <IconButton color="secondary">
+          <IconButton
+            onClick={() => {
+              window.open("https://www.facebook.com/lasillaenradio/", "_blank");
+            }}
+            color="secondary"
+          >
             <FacebookIcon />
           </IconButton>
-          <IconButton color="secondary">
+          <IconButton
+            onClick={() => {
+              window.open(
+                "https://www.youtube.com/channel/UCxnXkeHoxiMUk2R90bNTsGw",
+                "_blank"
+              );
+            }}
+            color="secondary"
+          >
             <YouTubeIcon />
           </IconButton>
-          <IconButton color="secondary">
+          <IconButton
+            onClick={() => {
+              window.open(
+                "https://www.instagram.com/lasillaenradio/",
+                "_blank"
+              );
+            }}
+            color="secondary"
+          >
             <InstagramIcon />
           </IconButton>
-          <IconButton color="secondary">
+          <IconButton
+            onClick={() => {
+              window.open("https://twitter.com/RadioLaSilla", "_blank");
+            }}
+            color="secondary"
+          >
             <TwitterIcon />
           </IconButton>
           <div className={classes.search}>
@@ -126,7 +152,7 @@ export default function NavbarMain({ setIsHome }) {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Buscar…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
