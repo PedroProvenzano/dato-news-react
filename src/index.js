@@ -1,14 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import store from "./app/store";
+import { Provider } from "react-redux";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Roboto", "Montserrat, sans-serif"].join(","),
+  },
+  palette: {
+    primary: {
+      light: "#ffb85b",
+      main: "#ffa733",
+      dark: "#b27423",
+      contrastText: "#111",
+    },
+    secondary: {
+      light: "#5b5b5b",
+      main: "#333333",
+      dark: "#232323",
+      contrastText: "#fff",
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

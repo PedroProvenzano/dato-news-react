@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import NavbarMain from "./components/NavbarMain";
+import "./styles/app.scss";
+import Fab from "@material-ui/core/Fab";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { useState } from "react";
 
 function App() {
+  const [isHome, setIsHome] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <NavbarMain setIsHome={setIsHome} />
+      {!isHome && (
+        <Fab
+          onClick={() => setIsHome(true)}
+          className="fab-back"
+          color="secondary"
         >
-          Learn React
-        </a>
-      </header>
+          <ArrowBackIcon />
+        </Fab>
+      )}
     </div>
   );
 }
