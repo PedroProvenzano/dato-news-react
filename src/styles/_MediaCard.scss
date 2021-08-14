@@ -1,0 +1,50 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 35vw;
+  height: 350px;
+  box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.39);
+  margin-top: 2rem;
+  @media (max-width: 600px) {
+    width: 95%;
+    height: 300px;
+  }
+
+  .CardImgContainer {
+    width: 100%;
+    height: 15vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 600px) {
+      height: 50%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .CardTitulo {
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .CardTitCont {
+    overflow-y: scroll;
+    height: 80px;
+    width: 100%;
+    padding: 0 0.4rem;
+  }
+
+  .CardButtonCont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

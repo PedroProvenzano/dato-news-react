@@ -1,0 +1,26 @@
+$primary-color: #333333;
+$secondary-color: #ffa733;
+
+.radio-cont {
+  overflow: hidden;
+  padding-top: 591.44px / 1127.34px * 100%; /* 16:9*/
+  position: relative;
+  justify-self: flex-end;
+  text-align: center;
+  p {
+    color: $primary-color;
+  }
+  span {
+    margin-left: 5px;
+    font-weight: 500;
+  }
+
+  iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

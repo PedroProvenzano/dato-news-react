@@ -6,13 +6,18 @@ import InputBase from "@material-ui/core/InputBase";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import useWindowDimensions from "./WindowDim";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import RadioIcon from "@material-ui/icons/Radio";
+import { Link } from "react-router-dom";
+import SectionDrawer from "./Drawer";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleNav, toggleRadio } from "../features/counter/generalSlice";
+import getGeneralTab from "../features/counter/selector";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,46 +74,123 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavbarMain({ setIsHome }) {
+export default function NavbarMain({ setIsHome, width }) {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const anchorRef = React.useRef(null);
+  const { mobileNav } = useSelector(getGeneralTab());
 
-  const { width } = useWindowDimensions();
-
-  console.log(width);
+  const handleToggle = () => {
+    dispatch(toggleNav());
+  };
 
   return (
     <div className={classes.root}>
+      <SectionDrawer setIsHome={setIsHome} anchorRef={anchorRef} />
       <AppBar position="static">
         <Toolbar>
           {width < 600 && (
             <IconButton
+              ref={anchorRef}
               edge="start"
               className={classes.menuButton}
               color="inherit"
               aria-label="open drawer"
+              onClick={handleToggle}
             >
               <MenuIcon />
             </IconButton>
           )}
           {width > 600 && (
             <Box className={classes.title}>
-              <Button
-                onClick={() => {
-                  if (setIsHome) {
-                    setIsHome(false);
-                  }
-                }}
-                color="secondary"
+              <Link to="/seccion/actualidad" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Actualidad
+                </Button>
+              </Link>
+              <Link to="/seccion/cultura" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Cultura
+                </Button>
+              </Link>
+              <Link to="/seccion/deportes" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Deportes
+                </Button>
+              </Link>
+              <Link to="/seccion/streaming" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Streaming
+                </Button>
+              </Link>
+              <Link
+                to="/seccion/espectaculos"
+                style={{ textDecoration: "none" }}
               >
-                Actualidad
-              </Button>
-              <Button color="secondary">Cultura</Button>
-              <Button color="secondary">Deportes</Button>
-              <Button color="secondary">Streaming</Button>
-              <Button color="secondary">Espectáculos</Button>
-              <Button color="secondary">Entrevistas</Button>
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Espectáculos
+                </Button>
+              </Link>
+              <Link
+                to="/seccion/entrevistas"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  onClick={() => {
+                    if (setIsHome) {
+                      setIsHome(false);
+                    }
+                  }}
+                  color="secondary"
+                >
+                  Entrevistas
+                </Button>
+              </Link>
             </Box>
           )}
+          <IconButton
+            onClick={() => {
+              dispatch(toggleRadio());
+            }}
+            color="secondary"
+          >
+            <RadioIcon />
+          </IconButton>
           <IconButton
             onClick={() => {
               window.open("https://www.facebook.com/lasillaenradio/", "_blank");
@@ -147,21 +229,42 @@ export default function NavbarMain({ setIsHome }) {
           >
             <TwitterIcon />
           </IconButton>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          {width > 600 && (
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Buscar…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
             </div>
-            <InputBase
-              placeholder="Buscar…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
+          )}
         </Toolbar>
       </AppBar>
+      {width < 600 && !mobileNav && (
+        <AppBar position="static">
+          <Toolbar>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Buscar…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
+          </Toolbar>
+        </AppBar>
+      )}
     </div>
   );
 }

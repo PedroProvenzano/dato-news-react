@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import store from "./app/store";
 import { Provider } from "react-redux";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import { BrowserRouter } from "react-router-dom";
+import Loading from "./pages/Loading";
 
 const theme = createTheme({
   typography: {
@@ -32,7 +33,9 @@ ReactDOM.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <App />
+        <BrowserRouter>
+          <Loading />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
