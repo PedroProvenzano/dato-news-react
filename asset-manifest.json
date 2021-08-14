@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dato-news-react/static/css/main.071c178a.chunk.css",
-    "main.js": "/dato-news-react/static/js/main.d97a3234.chunk.js",
-    "main.js.map": "/dato-news-react/static/js/main.d97a3234.chunk.js.map",
+    "main.js": "/dato-news-react/static/js/main.3bfb8a29.chunk.js",
+    "main.js.map": "/dato-news-react/static/js/main.3bfb8a29.chunk.js.map",
     "runtime-main.js": "/dato-news-react/static/js/runtime-main.f2f37841.js",
     "runtime-main.js.map": "/dato-news-react/static/js/runtime-main.f2f37841.js.map",
     "static/js/2.f31faed1.chunk.js": "/dato-news-react/static/js/2.f31faed1.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f2f37841.js",
     "static/js/2.f31faed1.chunk.js",
     "static/css/main.071c178a.chunk.css",
-    "static/js/main.d97a3234.chunk.js"
+    "static/js/main.3bfb8a29.chunk.js"
   ]
 }
