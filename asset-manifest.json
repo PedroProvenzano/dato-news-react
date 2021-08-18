@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/dato-news-react/static/css/main.b0aa4932.chunk.css",
-    "main.js": "/dato-news-react/static/js/main.395f16f8.chunk.js",
-    "main.js.map": "/dato-news-react/static/js/main.395f16f8.chunk.js.map",
-    "runtime-main.js": "/dato-news-react/static/js/runtime-main.8ae90052.js",
-    "runtime-main.js.map": "/dato-news-react/static/js/runtime-main.8ae90052.js.map",
-    "static/js/2.ea57a2ce.chunk.js": "/dato-news-react/static/js/2.ea57a2ce.chunk.js",
-    "static/js/2.ea57a2ce.chunk.js.map": "/dato-news-react/static/js/2.ea57a2ce.chunk.js.map",
-    "static/js/3.bc55192b.chunk.js": "/dato-news-react/static/js/3.bc55192b.chunk.js",
-    "static/js/3.bc55192b.chunk.js.map": "/dato-news-react/static/js/3.bc55192b.chunk.js.map",
+    "main.css": "/dato-news-react/static/css/main.b35728a4.chunk.css",
+    "main.js": "/dato-news-react/static/js/main.a4655037.chunk.js",
+    "main.js.map": "/dato-news-react/static/js/main.a4655037.chunk.js.map",
+    "runtime-main.js": "/dato-news-react/static/js/runtime-main.a5554227.js",
+    "runtime-main.js.map": "/dato-news-react/static/js/runtime-main.a5554227.js.map",
+    "static/js/2.79397518.chunk.js": "/dato-news-react/static/js/2.79397518.chunk.js",
+    "static/js/2.79397518.chunk.js.map": "/dato-news-react/static/js/2.79397518.chunk.js.map",
+    "static/js/3.2e0d8405.chunk.js": "/dato-news-react/static/js/3.2e0d8405.chunk.js",
+    "static/js/3.2e0d8405.chunk.js.map": "/dato-news-react/static/js/3.2e0d8405.chunk.js.map",
     "index.html": "/dato-news-react/index.html",
-    "static/css/main.b0aa4932.chunk.css.map": "/dato-news-react/static/css/main.b0aa4932.chunk.css.map",
-    "static/js/2.ea57a2ce.chunk.js.LICENSE.txt": "/dato-news-react/static/js/2.ea57a2ce.chunk.js.LICENSE.txt",
+    "static/css/main.b35728a4.chunk.css.map": "/dato-news-react/static/css/main.b35728a4.chunk.css.map",
+    "static/js/2.79397518.chunk.js.LICENSE.txt": "/dato-news-react/static/js/2.79397518.chunk.js.LICENSE.txt",
     "static/media/Logo_cardenas_200x200.1e00064f.png": "/dato-news-react/static/media/Logo_cardenas_200x200.1e00064f.png",
     "static/media/MariaJuliaRodriguez.7573eb4a.jpeg": "/dato-news-react/static/media/MariaJuliaRodriguez.7573eb4a.jpeg",
+    "static/media/OLIVIA_logo.c5c522c1.jpg": "/dato-news-react/static/media/OLIVIA_logo.c5c522c1.jpg",
     "static/media/dato-news.0242327b.png": "/dato-news-react/static/media/dato-news.0242327b.png",
     "static/media/app.scss": "/dato-news-react/static/media/fondoBanner.88e3310b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ae90052.js",
-    "static/js/2.ea57a2ce.chunk.js",
-    "static/css/main.b0aa4932.chunk.css",
-    "static/js/main.395f16f8.chunk.js"
+    "static/js/runtime-main.a5554227.js",
+    "static/js/2.79397518.chunk.js",
+    "static/css/main.b35728a4.chunk.css",
+    "static/js/main.a4655037.chunk.js"
   ]
 }
